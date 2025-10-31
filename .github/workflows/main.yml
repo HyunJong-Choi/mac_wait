@@ -36,13 +36,13 @@ jobs:
         run: |
           pyinstaller \
             --windowed \
-            --name MyApp \
+            --name mac_wait \
             --distpath dist \
-            my_app/main.py
+            mac_wait/main.py
 
       # 5. 빌드 결과 업로드
       - name: Upload .app artifact
         uses: actions/upload-artifact@v4
         with:
-          name: MyApp-macOS
-          path: dist/MyApp.app
+          name: mac_wait-macOS
+          path: dist/mac_wait.app
