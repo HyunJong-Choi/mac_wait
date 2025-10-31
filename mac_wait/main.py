@@ -45,7 +45,7 @@ class AppController(QWidget):
         self.list_widget.clear()
         for p in psutil.process_iter(['pid', 'name']):
             try:
-                if p.info['name'] and not p.info['name'].startswith("com.apple.") and p.info['name'].startswith("msw"):
+                if p.info['name'] and not p.info['name'].startswith("com.apple.") and p.info['name'].startswith("maple"):
                     self.list_widget.addItem(f"{p.info['name']} (PID: {p.info['pid']})")
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 continue
