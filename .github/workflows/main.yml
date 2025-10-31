@@ -38,6 +38,7 @@ jobs:
             --windowed \
             --name mac_wait \
             --distpath dist \
+            --onefile \
             mac_wait/main.py
 
       # 5. 빌드 결과 업로드
